@@ -154,16 +154,20 @@
 
 <div class="source">
 <div class="source"><pre class="prettyprint linenums">Benchmark                                      Mode  Cnt       Score       Error  Units
+
+(1 Thread)
 SerDeBenchmark.testDeserializeDecryption1k    thrpt    5  989378,065 &#xb1; 72106,945  ops/s -&gt; 966 mb/s
 SerDeBenchmark.testDeserializeDecryption256k  thrpt    5    5809,043 &#xb1;   356,283  ops/s -&gt; 1452 mb/s
 SerDeBenchmark.testDeserializeDecryption4k    thrpt    5  385975,071 &#xb1; 25585,912  ops/s -&gt; 1500 mb/s
 SerDeBenchmark.testDeserializeDecryption8k    thrpt    5  197596,274 &#xb1; 27436,372  ops/s -&gt; 1543 mb/s
 
+(2 Threads)
 SerDeBenchmark.testSerializeEncryption1k      thrpt    5  179025,718 &#xb1; 76085,422  ops/s -&gt; 174 mb/s
 SerDeBenchmark.testSerializeEncryption256k    thrpt    5    3683,626 &#xb1;   496,401  ops/s -&gt; 920 mb/s
 SerDeBenchmark.testSerializeEncryption4k      thrpt    5  133651,065 &#xb1; 65639,083  ops/s -&gt; 522 mb/s
 SerDeBenchmark.testSerializeEncryption8k      thrpt    5   98810,508 &#xb1; 19159,625  ops/s -&gt; 771 mb/s
-</pre></div></div></div>
+</pre></div></div>
+<p><a class="externalLink" href="http://security.stackexchange.com/questions/38055/why-does-aes-encryption-take-more-time-than-decryption/38056">With AES CBC encryption is naturally slower than descryption</a> but you can speed it up by using a multithreaded Producer.</p></div>
                   </div>
             </div>
           </div>
