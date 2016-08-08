@@ -20,5 +20,5 @@
     SerDeBenchmark.testSerializeEncryption8k      thrpt    5   98810,508 ± 19159,625  ops/s -> 771 mb/s
 
     
-[With AES CBC encryption is naturally slower than descryption](http://security.stackexchange.com/questions/38055/why-does-aes-encryption-take-more-time-than-decryption/38056) 
+[With AES CBC encryption is naturally slower than decryption](http://security.stackexchange.com/questions/38055/why-does-aes-encryption-take-more-time-than-decryption/38056) 
 but you can speed it up by using a multithreaded Producer.
