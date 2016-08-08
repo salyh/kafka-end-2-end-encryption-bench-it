@@ -6,12 +6,19 @@
 
 
     Benchmark                                      Mode  Cnt       Score       Error  Units
+    
+    (1 Thread)
     SerDeBenchmark.testDeserializeDecryption1k    thrpt    5  989378,065 ± 72106,945  ops/s -> 966 mb/s
     SerDeBenchmark.testDeserializeDecryption256k  thrpt    5    5809,043 ±   356,283  ops/s -> 1452 mb/s
     SerDeBenchmark.testDeserializeDecryption4k    thrpt    5  385975,071 ± 25585,912  ops/s -> 1500 mb/s
     SerDeBenchmark.testDeserializeDecryption8k    thrpt    5  197596,274 ± 27436,372  ops/s -> 1543 mb/s
     
+    (2 Threads)
     SerDeBenchmark.testSerializeEncryption1k      thrpt    5  179025,718 ± 76085,422  ops/s -> 174 mb/s
     SerDeBenchmark.testSerializeEncryption256k    thrpt    5    3683,626 ±   496,401  ops/s -> 920 mb/s
     SerDeBenchmark.testSerializeEncryption4k      thrpt    5  133651,065 ± 65639,083  ops/s -> 522 mb/s
     SerDeBenchmark.testSerializeEncryption8k      thrpt    5   98810,508 ± 19159,625  ops/s -> 771 mb/s
+
+    
+[With AES CBC encryption is naturally slower than descryption](http://security.stackexchange.com/questions/38055/why-does-aes-encryption-take-more-time-than-decryption/38056) 
+but you can speed it up by using a multithreaded Producer.

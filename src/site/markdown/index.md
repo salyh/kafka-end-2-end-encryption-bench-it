@@ -14,4 +14,4 @@ See [https://github.com/salyh/kafka-end-2-end-encryption](https://github.com/sal
     
 ## Benchmark Results
 
-See [here](/results.html)
+See [here](results.html)
